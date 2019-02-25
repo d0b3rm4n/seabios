@@ -70,6 +70,7 @@ static struct bochsvga_mode
     { 0x14a, { MM_DIRECT, 1152, 864,  16, 8, 16, SEG_GRAPH } },
     { 0x14b, { MM_DIRECT, 1152, 864,  24, 8, 16, SEG_GRAPH } },
     { 0x14c, { MM_DIRECT, 1152, 864,  32, 8, 16, SEG_GRAPH } },
+    { 0x14d, { MM_DIRECT,  480, 800,  32, 8, 16, SEG_GRAPH } },
     { 0x175, { MM_DIRECT, 1280, 768,  16, 8, 16, SEG_GRAPH } },
     { 0x176, { MM_DIRECT, 1280, 768,  24, 8, 16, SEG_GRAPH } },
     { 0x177, { MM_DIRECT, 1280, 768,  32, 8, 16, SEG_GRAPH } },
