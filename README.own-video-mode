@@ -1,0 +1,15 @@
+For own video mode (like in VirtualBox CustomVideoMode):
+
+1) add the mode to vgasrc/bochsvga.c
+2) cat<<EOF > .config
+CONFIG_BUILD_VGABIOS=y
+CONFIG_VGA_BOCHS=y
+CONFIG_VGA_PCI=y
+CONFIG_VGA_ALLOCATE_EXTRA_STACK=n
+CONFIG_DEBUG_LEVEL=1
+EOF
+
+3) make oldnoconfig V=1 EXTRAVERSION=-ovm
+4) make V=1 out/vgabios-stdvga.bin EXTRAVERSION=-rmz
+5) qemu-kvm -vga std -L /<path_to_vgabios_build_folder>/ ......
+
